@@ -22,6 +22,6 @@ do
      openssl rand -base64 48 | cut -c1-$PASSLENGTH
 done >> plog.txt
 
-cat plog.txt >> .xplog.txt
+cat plog.txt >> /~/.xplog.txt
 
 echo "Done."
