@@ -4,7 +4,7 @@
 
 #This script was inspired by the work off HackerSploit from his video here: https://www.youtube.com/watch?v=P5552IJp7tU
 
-#Don't run as sudo unless you want the output of .xplog to go to the root directory (chances are you don't).
+#Do not run as sudo unless you want the output of .xplog to go to the root directory (chances are you don't).
 
 echo 'This is a basic password generator.'
 echo 'It will allow password generation using'
@@ -18,7 +18,8 @@ sleep 8
 clear
 
 echo 'Please enter a nickname for this password'
-echo '(fireffox or ssh for example).'
+echo '(website or username for example).'
+echo ""
 echo 'Note that this will be how your password'
 echo 'is labeled in the save file'
 read PASSNICK
@@ -29,7 +30,7 @@ read PASSLENGTH #I don't know what the maximum
                 #done up to 256
 
 #For the letters (p) in (sequence1) do the following: creates 48 base64 characters
-#using openssl and cutting thhe length to that specified bbbby the user
+#using openssl and cutting thhe length to that specified by the user
 
 #replace '-base64' in with '-hex' for a less-secure but more-easily-readable password.
 
