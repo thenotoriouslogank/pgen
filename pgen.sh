@@ -4,11 +4,22 @@
 
 #This script was inspired by the work off HackerSploit from his video here: https://www.youtube.com/watch?v=P5552IJp7tU
 
-echo 'Explanation of what we do here.'
-echo 'Please enter a nickname for this password (fireffox or ssh for example).'
-echo 'Note that this will be how your password is labeled in the save file'
+echo 'This is a basic password generator.'
+echo 'It will allow password generation using'
+echo 'either base64 or hex encryption.'
+echo 'By default, it will also keep an'
+echo 'ongoing log file of generated passwords and'
+echo 'their associated usernames/nicknames.'
+
+sleep 10
+clear
+
+echo 'Please enter a nickname for this password'
+echo '(fireffox or ssh for example).'
+echo 'Note that this will be how your password'
+echo 'is labeled in the save file'
 read PASSNICK
-echo $PASSNICK > plog.txt
+echo $PASSNICK > .plog.txt
 echo 'Please enter length of password'
 read PASSLENGTH
 
@@ -20,8 +31,9 @@ read PASSLENGTH
 for p in $(seq 1 1);
 do
      openssl rand -base64 48 | cut -c1-$PASSLENGTH
-done >> plog.txt
+done >> .plog.txt
 
-cat plog.txt >> /~/.xplog.txt
+cat .plog.txt >> /~/.xplog.txt
+rm .plog.txt
 
 echo "Done."
