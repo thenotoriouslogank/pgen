@@ -33,7 +33,7 @@ do
      openssl rand -base64 48 | cut -c1-$PASSLENGTH
 done >> .plog.txt
 
-touch /~/.xplog.txt
+cat > /~/.xplog.txt
 cat .plog.txt >> /~/.xplog.txt
 rm .plog.txt
 
