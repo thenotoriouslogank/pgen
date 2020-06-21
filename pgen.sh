@@ -45,6 +45,8 @@ done >> .plog.txt
 touch /$HOME/.xplog.txt >> /$HOME/.xplog.txt
 #Appends the output of the individual entry to the .xplog.txt file.
 cat .plog.txt >> /$HOME/.xplog.txt
+#Inserts timestamp.
+date >> /$HOME/.xplog.txt
 #Deletes the .plog.txt file
 rm .plog.txt
 
